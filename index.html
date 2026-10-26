@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luyện viết 议论文</title>
+  <meta name="description" content="Công cụ luyện viết nghị luận tiếng Trung (phương pháp luận chứng) cho HSK 7–9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' fill='%23fff' stroke='%232F6E51' stroke-width='2'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%231D2A31' font-family='serif'%3E%E8%AE%BA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Đăng nhập -->
+  <section id="login-view" class="login" hidden>
+    <div class="login-inner">
+      <div class="gz-title" aria-hidden="true"><span>议</span><span>论</span><span>文</span></div>
+      <h1 class="login-heading">Luyện viết nghị luận tiếng Trung</h1>
+      <p class="login-sub">Phương pháp luận chứng cho HSK 7–9</p>
+      <form id="login-form" class="login-form" autocomplete="on">
+        <label>Tên đăng nhập
+          <input name="username" autocomplete="username" required autocapitalize="none" spellcheck="false">
+        </label>
+        <label>Mật khẩu
+          <input name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <p class="form-error" id="login-error" role="alert" hidden></p>
+        <button class="btn btn-primary" type="submit">Đăng nhập</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Ứng dụng -->
+  <div id="app-view" class="shell" hidden>
+    <nav class="rail" aria-label="Các mục luyện tập">
+      <a class="rail-brand" href="#/thuvien"><span class="gz-mini">议</span><span class="gz-mini">论</span><span class="gz-mini">文</span></a>
+      <ul class="rail-list">
+        <li><a href="#/thuvien" data-route="thuvien"><span class="r-vi">Thư viện</span><span class="r-zh">论证方法</span></a></li>
+        <li><a href="#/nhandien" data-route="nhandien"><span class="r-vi">Nhận diện</span><span class="r-zh">辨析</span></a></li>
+        <li><a href="#/khung" data-route="khung"><span class="r-vi">Điền khung</span><span class="r-zh">句式练习</span></a></li>
+        <li><a href="#/danyi" data-route="danyi"><span class="r-vi">Lập dàn ý</span><span class="r-zh">提纲</span></a></li>
+        <li><a href="#/viet" data-route="viet"><span class="r-vi">Viết bài</span><span class="r-zh">写作</span></a></li>
+        <li><a href="#/lichsu" data-route="lichsu"><span class="r-vi">Lịch sử</span><span class="r-zh">记录</span></a></li>
+      </ul>
+      <div class="rail-foot">
+        <p class="rail-user" id="rail-user"></p>
+        <label class="switch"><input type="checkbox" id="pref-pinyin"><span>Hiện pinyin</span></label>
+        <button class="link-btn" id="btn-refresh" type="button">Tải lại dữ liệu</button>
+        <p class="rail-meta" id="content-meta"></p>
+        <button class="link-btn" id="btn-logout" type="button">Đăng xuất</button>
+      </div>
+    </nav>
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+
+  <div id="toast-host" class="toast-host" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3/dist/index.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/modules/library.js" defer></script>
+  <script src="js/modules/identify.js" defer></script>
+  <script src="js/modules/frame.js" defer></script>
+  <script src="js/modules/topics.js" defer></script>
+  <script src="js/modules/outline.js" defer></script>
+  <script src="js/modules/essay.js" defer></script>
+  <script src="js/modules/history.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
